@@ -1,0 +1,7 @@
+Software and Web Applications used: GIMP and Canva
+
+-I made my logo with Canva
+
+-I exported my images to jpg format using GIMP.
+-I cropped a photo into a circle using GIMP 
+-
