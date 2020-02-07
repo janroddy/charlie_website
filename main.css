@@ -179,12 +179,14 @@ textarea {
 button {
   margin-left: 
   .5em;
+
 }
 
 div.gallery {
-  border: 1px solid #ccc;
+ /* border: 1px solid #ccc; */
   width: 90%;
   margin: 10%;
+  text-align: center;
 }
 
 .gallery_center {
@@ -192,11 +194,17 @@ div.gallery {
   margin: auto;
   width: 90%;
   border: 3px solid green;
-  padding: 10%;
+  padding: 8%;
 }
 
 div.gallery:hover {
   border: 1px solid #777;
+  
+  div.gallery img {
+  width: 90%; 
+  height: 90%;
+  }
+
 }
 
 div.gallery img {
@@ -205,9 +213,10 @@ div.gallery img {
 }
 
 div.desc {
-  padding: 15px;
-  text-align: center;
-  border: 1px solid #ccc;
+  padding: 5%;
+  font-size: 1.1em;
+  text-align: left;
+ /* border: 1px solid #ccc; */
 }
 /*
 * {
