@@ -1,6 +1,12 @@
-/*colors teal: #daf3f4
-Credits: some of the styles were adapted from W3 Schools CSS Tutorial;
+/*
+Credits: some of the styles were adapted from W3 Schools CSS Tutorial
  */
+
+ /*
+ Style notes -------
+ color pallet: teal- #daf3f4
+ */
+
 #about_text {
   font-size: 1.5em;
 }
@@ -58,7 +64,6 @@ nav {
   font-weight: bold;
   font-size: 1em;
 }
-
 
 .menu a.active {
   background-color: #4CAF50;
@@ -179,15 +184,23 @@ button {
 div.gallery {
   border: 1px solid #ccc;
   width: 90%;
-  margin: 2%;
+  margin: 10%;
+}
+
+.gallery_center {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+  border: 3px solid green;
+  padding: 10%;
 }
 
 div.gallery:hover {
-  border: 2px solid #777;
+  border: 1px solid #777;
 }
 
 div.gallery img {
-  width: 90%;
+  width: 90%; 
   height: 90%;
 }
 
