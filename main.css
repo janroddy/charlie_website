@@ -95,8 +95,17 @@ li a:hover {
   .menu a {
      display: none; 
   }
+  .menu a:not(:first-child) {display: none;}
+  .menu.responsive {position: relative;} 
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
   .responsive a {
-    float: none;
+    background-color: #d3d3d3; 
+    float: none; 
     display: block;
     text-align: left;
   }
@@ -109,7 +118,6 @@ li a:hover {
     color: white;
     border-radius: 10px;
 }
-.menu a:not(:first-child) {display: none;}
   
   .menu a.icon {
     float: right;
@@ -272,6 +280,7 @@ div.desc {
     width: 49.99999%;
     margin: 6px 0;
   }
+
 }
 
 @media only screen and (max-width: 500px) {
