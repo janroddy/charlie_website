@@ -30,6 +30,7 @@ body {
   height: 150%;
 
 }
+
 img {
   margin: 5%;
   background-color: white;
@@ -230,20 +231,20 @@ textarea {
 button {
   margin-left: 
   .5em;
-
 }
 
+/* PHOTO GALLERY STYLES =================*/
 div.gallery {
- /* border: 1px solid #ccc; */
   width: 90%;
   margin: 10%;
   text-align: center;
 }
 
+
 .gallery_center {
   text-align: center;
   margin: auto;
-  width: 90%;
+  width: 100%;
   padding: 8%;
 }
 
@@ -254,51 +255,45 @@ div.gallery:hover {
 }
 
 div.gallery img {
-  width: 90%; 
-  height: 90%;
+  width: 100%; 
+  height: auto;
   transition: filter .5s ease-in-out;
   -webkit-filter: grayscale(0%); 
   filter: grayscale(0%); 
 }
-/*
-img {
-  transition: filter .5s ease-in-out;
-  -webkit-filter: grayscale(0%); 
-  filter: grayscale(0%); 
-}
-img:hover {
-  -webkit-filter: grayscale(100%); 
-  filter: grayscale(100%); 
-}
-*/
+
 div.desc {
   padding: 5%;
   font-size: 1.1em;
   text-align: left;
- /* border: 1px solid #ccc; */
 }
-/*
-* {
-  box-sizing: border-box;
-}
-*/
+
+
 .responsive {
-  padding: 0 6px;
+  padding: 0 6px; 
   float: left;
   width: 24.99999%;
 }
 
+/*Tablet Styles for gallery*/
 @media only screen and (max-width: 700px) {
   .responsive {
     width: 49.99999%;
-    margin: 6px 0;
+   /* margin: 6px 0;*/
   }
 
 }
-
+/*Mobile Styles for gallery*/
 @media only screen and (max-width: 500px) {
   .responsive {
+
+    width: 90%;
+    height: auto;
+  }
+  div.gallery img {
+    /*
     width: 100%;
+    height: auto;*/
   }
 }
 
