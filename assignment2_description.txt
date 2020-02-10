@@ -1,10 +1,16 @@
+Jan Roddy
+csci411 Advanced Web Programming 
+
+
+
+
 Software and Web Applications used: GIMP and Canva
 
 -I made my logo with Canva
 
--I exported all images to .jpg format, unless they required transparency (.png) format using GIMP.
--I cropped a photo into a circle using GIMP using layers 
--I added text with drop shadow to am image with GIMP
+-I exported images to .jpg format, unless they required transparency (.png) format using GIMP.
+-I cropped a photo into a circle using layers in GIMP 
+-I added text with drop shadow to am image with GIMP 
 -I added a border to an image using GIMP
 -
 
