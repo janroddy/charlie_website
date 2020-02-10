@@ -24,28 +24,40 @@
     <h1 class="titles">Send Charlie Some Love &hearts;</h1>
     <div class ="row">
       <div class="column">
-        <img src="img/baby_char.jpg" alt="Yorkie Poodle cross puppy" class="center">
+        <img src="img/baby_char.jpg" alt="Yorkie Poodle cross puppy" class="center" id="sweetboy2">
       </div>
       <div  class="column"> 
-        <form action="/my-handling-form-page" method="post">
+        <!--<form action="/my-handling-form-page" method="post"> -->
+          <form id="contact_form" action="/action_page.php">
           <ul>
             <li>
-              <label for="name">Name</label><br>
-              <input type="text" id="name" name="user_name">
+              <label for="name">First Name</label><br>
+              <input type="text" id="fname" name="first_name">
             </li>
+
+            <li>
+              <label for="name">Last Name</label><br>
+              <input type="text" id="lname" name="last_name">
+            </li>
+            
             <li>
               <label for="mail">E-mail</label><br>
               <input type="email" id="mail" name="user_mail">
             </li>
+            
             <li>
               <label for="msg">Message</label><br>
               <textarea id="msg" name="user_message"></textarea>
             </li>
+            
             <li>
               <input type="submit" value="Send Message"></li>
-          </ul>
         
+          </ul>
         </form>
+        <button onclick="getAllElements()">Try it</button>
+        <p id="demo"></p>
+
     </div>  
     </div>
   </body>
