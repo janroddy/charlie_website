@@ -35,9 +35,29 @@ function getAllElements() {
 }
 
 function validateForm() {
-  var x = document.forms["contact_form"]["fname"].value;
-  if (x == "") {
+  var fName = document.forms["contact_form"]["fname"].value;
+  var lName = document.forms["contact_form"]["lname"].value;
+  var email = document.forms["contact_form"]["mail"].value;
+  var msg = document.forms["contact_form"]["msg"].value;
+  
+  if (fName == "") {
     alert("First Name must be filled out");
     return false;
+  }
+  else if (lName == "") {
+    alert("Last Name must be filled out");
+    return false;
+  }
+  else if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  else if (msg == "") {
+    alert("Message must be filled out");
+    return false;
+  }
+
+  else {
+    return true; 
   }
 }
