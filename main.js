@@ -1,3 +1,11 @@
+/*
+Citations:Adapted from W3 Schools JavaScript tutorial 
+*/
+
+
+
+
+//Mobile Navigation Menu Display->changes class name from menu to responsive 
 function myFunction() {
   var x = document.getElementById("myMenu"); 
   if (x.className === "menu") {
