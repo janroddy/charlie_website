@@ -1,17 +1,30 @@
 Jan Roddy
 csci411 Advanced Web Programming 
 
-
+*************
+IMAGE EDITING 
+**********
 -I made my logo with Canva (I love Canva!)
 
 
 -I exported images to .jpg format, unless they required transparency (.png) format using GIMP.
+
 -I cropped a photo into a circle using layers in GIMP 
--I added text with drop shadow to am image with GIMP 
+-I added text with drop shadow (for readability) to am image with GIMP (it is on the "adventures page")
+
+
+************
+IMAGE display
+************
+Image gallery is on the "friends" page
+-built with CSS 
 
 
 
-X-factor description: Close to being mobile friendly design. 
+
+**************
+X-factor description: Close to being mobile friendly design.
+************* 
 -I used media queries and break points 
--I need to work out some bugs with 
--I need to work on tablet version 
+-I'm still working out some of the mobile navigation menu bugs 
+-I need to work on tablet version as well 
