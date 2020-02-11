@@ -33,8 +33,9 @@
         <img src="img/baby_char.jpg" alt="Yorkie Poodle cross puppy" class="center" id="sweetboy2">
       </div>
       <div  class="column"> 
-        <!--<form action="/my-handling-form-page" method="post"> -->
-          <form id="contact_form" action="/action_page.php" target="_blank" method="post">
+
+          <form id="contact_form" action="/action_page.php" onsubmit="return validateForm()" target="_blank" method="post">
+          
           <ul>
             <li>
               <label for="name">First Name</label><br>
@@ -70,7 +71,6 @@
            </ul>
              <ul>
              <li> <button onclick="getAllElements()">Review Message</button></li>
-             <li> <button onclick="validateForm()">Validate</button></li>
             </ul>
         
         
