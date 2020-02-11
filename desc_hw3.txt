@@ -1,0 +1,14 @@
+Jan Roddy
+CSCI 411 Advanced Web Programming
+Assignment 3: JavaScript Form Validation
+February 12, 2020
+
+
+Variety of Forms Fields 
+
+CSS to Style the Form 
+
+
+JS functions for form validation 
+
+
