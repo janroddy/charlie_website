@@ -244,6 +244,10 @@ button {
     height: auto;
   }
 }
+input[type="radio"] {
+    display:inline;
+}
+
 
 /* PHOTO GALLERY STYLES =================*/
 div.gallery {

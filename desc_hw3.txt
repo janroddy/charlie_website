@@ -10,5 +10,6 @@ CSS to Style the Form
 
 
 JS functions for form validation 
-
+All inputs are required in the form
+if the message is longer than 250 characters it is not valid 
 
