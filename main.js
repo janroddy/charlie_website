@@ -41,3 +41,10 @@ function validateForm() {
     return false;
   }
 }
+
+fuction checkMsgLength() {
+  var strLen = documet.forms["contact_form"]["msg"].length;
+  if (strLen > 500) {
+    alert("Charlie cannot receive messages longer than 500 characters.");
+  } 
+}
