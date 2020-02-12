@@ -5,11 +5,20 @@ February 12, 2020
 
 
 Variety of Forms Fields 
+-email 
+-name (text)
+-message (text)
+
 
 CSS to Style the Form 
 
 
 JS functions for form validation 
-All inputs are required in the form
-if the message is longer than 250 characters it is not valid 
+-All inputs are required in the form
+-if the message is longer than 250 characters it is not valid
+-alerts  
 
+******
+Usability and Accessibility 
+*****
+-radio buttons and drop down menus are not advised difficult 

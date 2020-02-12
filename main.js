@@ -1,9 +1,31 @@
 /*
-Citations:Adapted from W3 Schools JavaScript tutorial 
+Citations: Some functions adapted from W3 Schools JavaScript tutorial 
 */
 
 
+/*
+const mail = document.getElementById('mail');
+console.log(mail);
 
+//event listener 
+mail.addEventListener('keyup', checkEmailInput()); 
+
+
+
+function checkEmailInput() {
+  isValidEmail = mail.checkValidity();
+
+    if (isValidEmail) {
+      console.log("valid email");
+      return true;
+    }
+    else {
+      console.log("invalid email");
+      return false;
+    }
+}
+
+*/
 
 //Mobile Navigation Menu Display->changes class name from menu to responsive 
 function myFunction() {
@@ -15,17 +37,19 @@ function myFunction() {
     x.className = "menu";
   }
 }
-
+//returns number of elements in the form 
 function getFormLength() {
   var formLength = document.getElementById("contact_form").elements.length;
   document.getElementById("demo").innerHTML = "Found " + formLength + " elements in the form.";
 }
 
+//returns user input of first name 
 function getFirstName() {
   var firstName = document.getElementById("contact_form").elements.namedItem("first_name").value;
   return firstName;
 }
 
+//displays thank you message to user after submitting a message to Charlie 
 function displayThankYouMessage() {
   var name = getFirstName();
   document.getElementById("demo").innerHTML = "Thanks, " + name +"!";
@@ -41,45 +65,54 @@ function getAllElements() {
   }
   document.getElementById("demo").innerHTML = txt;
 }
-
-function validateForm() {
-  var fName = document.forms["contact_form"]["fname"].value;
-  var lName = document.forms["contact_form"]["lname"].value;
-  var email = document.forms["contact_form"]["mail"].value;
-  var msg = document.forms["contact_form"]["msg"].value;
-  
-  if (checkMsgLength() == false){
-    return false;
-  }
-
-  if (fName == "") {
-    alert("First Name must be filled out");
-    return false;
-  }
-  else if (lName == "") {
-    alert("Last Name must be filled out");
-    return false;
-  }
-  else if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }
-  else if (msg == "") {
-    alert("Message must be filled out");
-    return false;
-  }
-  else {
-    return true; 
-  }
-}
-
+//
 function checkMsgLength() {
   var strLen = document.getElementById("msg").value.length;
-  console.log("strLen: " + strLen);
+  console.log("Message Length: " + strLen);
   
   if (strLen > 500) {
     alert("Charlie cannot receive messages longer than 500 characters.");
   }
 } 
+
+
+
+//validates contact form input on the browser side 
+function validateForm() {
+  var fName = document.forms["contact_form"]["fname"].value;
+  var lName = document.forms["contact_form"]["lname"].value;
+  var email = document.forms["contact_form"]["mail"].value;
+  var msg = document.forms["contact_form"]["msg"].value;
+  /*
+  if (checkMsgLength() == false){
+    return false;
+  }
+  */
+  if (fName == "") {
+    alert("First Name must be filled out");
+    document.getElementById("fname").style.borderColor = "red";
+
+    return false;
+  }
+  else if (lName == "") {
+    alert("Last Name must be filled out");
+    document.getElementById("lname").style.borderColor = "red";
+    return false;
+  }
+  else if (email == "") {
+    alert("Email must be filled out");
+    document.getElementById("mail").style.borderColor = "red";
+    return false;
+  }
+  else if (msg == "" || checkMsgLength() == false) {
+    alert("Message must be filled out with between 1 and 500 characters");
+    document.getElementById("msg").style.borderColor = "red";
+    return false;
+  }
+  else {
+    return true; 
+    document.get
+  }
+}
 
 

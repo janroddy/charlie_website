@@ -219,20 +219,20 @@ input:focus,
 textarea:focus {
   border-color: #daf3f4;
 }
+input:valid {
+  border-color: black;
+}
+input:invalid {
+  border-color: red;
+}
 
 textarea {
   vertical-align: top;
   height: 5em;
 }
 
-.button {
-  padding-left: 90px; 
-}
 
-button {
-  margin-left: 
-  .5em;
-}
+
 @media only screen and (max-width: 500px) {
 
   input {
@@ -240,13 +240,22 @@ button {
     height: auto;
   }
   textarea {
-     width: 100%;
+    width: 100%;
     height: auto;
   }
+  #buttons {
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+  }
+  #submit_button, #review_button {
+    width: 70%;
+    text-align: center;
+  }
+
+
 }
-input[type="radio"] {
-    display:inline;
-}
+
 
 
 /* PHOTO GALLERY STYLES =================*/
