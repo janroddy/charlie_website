@@ -48,6 +48,10 @@ function validateForm() {
   var email = document.forms["contact_form"]["mail"].value;
   var msg = document.forms["contact_form"]["msg"].value;
   
+  if (checkMsgLength() == false){
+    return false;
+  }
+
   if (fName == "") {
     alert("First Name must be filled out");
     return false;
@@ -64,8 +68,18 @@ function validateForm() {
     alert("Message must be filled out");
     return false;
   }
-
   else {
     return true; 
   }
 }
+
+function checkMsgLength() {
+  var strLen = document.getElementById("msg").value.length;
+  console.log("strLen: " + strLen);
+  
+  if (strLen > 500) {
+    alert("Charlie cannot receive messages longer than 500 characters.");
+  }
+} 
+
+
