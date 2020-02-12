@@ -231,6 +231,19 @@ textarea {
   height: 5em;
 }
 
+#buttons {
+    height: auto;
+    text-align: center;
+    border: 1px black solid;
+  }
+
+#submit_button, #review_button {
+  padding: 2%;
+  height: auto;
+  margin: 2%;
+  list-style: none;
+  text-align: center; 
+}
 
 
 @media only screen and (max-width: 500px) {
@@ -245,7 +258,6 @@ textarea {
   }
   #buttons {
     display: block;
-    border: 1px solid black;
     text-align: center;
   }
   #submit_button, #review_button {
