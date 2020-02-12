@@ -182,7 +182,7 @@ div p {
   padding: 20%;
 }
 
-
+/*Form Styles =================*/
 form {
   margin: 0 auto;
   width: 70%;
@@ -194,6 +194,7 @@ form ul {
   list-style: none;
   padding: 0;
   margin: 0;
+
 }
 
 form li + li {
@@ -231,6 +232,17 @@ textarea {
 button {
   margin-left: 
   .5em;
+}
+@media only screen and (max-width: 500px) {
+
+  input {
+    width: 100%;
+    height: auto;
+  }
+  textarea {
+     width: 100%;
+    height: auto;
+  }
 }
 
 /* PHOTO GALLERY STYLES =================*/
@@ -343,5 +355,7 @@ a:hover {
   height:auto;
   }
 }
+
+
 
 
