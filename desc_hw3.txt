@@ -20,5 +20,21 @@ JS functions for form validation
 
 ******
 Usability and Accessibility 
+
+citations: "Designing Accessibile Forms" https://blog.prototypr.io/
+designing-accessible-forms-82f2ea11697f
+
+https://webaim.org/resources/contrastchecker/
+
 *****
--radio buttons and drop down menus are not advised difficult 
+-layout is well organized and in an order that makes sense
+-radio buttons and drop down menus are not advised 
+-no mouse over menus are used 
+-contrast between text and background 
+  #I used a Color Contrast Checker tool called WebAim  
+-minimized clutter   
+
+Error Messages
+-simple, clear, and easy to understand what the problem is and how to fix it 
+-top of the page error placement 
+-all fields are required and this is stated on the form -> and indicated by * 

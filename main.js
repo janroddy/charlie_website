@@ -52,7 +52,8 @@ function getFirstName() {
 //displays thank you message to user after submitting a message to Charlie 
 function displayThankYouMessage() {
   var name = getFirstName();
-  document.getElementById("demo").innerHTML = "Thanks, " + name +"!";
+  document.getElementById("demo").innerHTML = "Thanks for sending Charlie some love, " + name +"!";
+  document.getElementById("demo").style.backgroundColor = "#daf3f4";
 }
 
 function getAllElements() {
@@ -91,28 +92,24 @@ function validateForm() {
   if (fName == "") {
     alert("First Name must be filled out");
     document.getElementById("fname").style.borderColor = "red";
-
-    return false;
   }
-  else if (lName == "") {
+  if (lName == "") {
     alert("Last Name must be filled out");
     document.getElementById("lname").style.borderColor = "red";
-    return false;
   }
-  else if (email == "") {
+  if (email == "") {
     alert("Email must be filled out");
     document.getElementById("mail").style.borderColor = "red";
-    return false;
   }
-  else if (msg == "" || checkMsgLength() == false) {
+  if (msg == "" || checkMsgLength() == false) {
     alert("Message must be filled out with between 1 and 500 characters");
     document.getElementById("msg").style.borderColor = "red";
-    return false;
   }
   else {
+    displayThankYouMessage();
     return true; 
-    document.get
   }
+  return false;
 }
 
 
