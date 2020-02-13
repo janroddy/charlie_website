@@ -84,26 +84,21 @@ function validateForm() {
   var lName = document.forms["contact_form"]["lname"].value;
   var email = document.forms["contact_form"]["mail"].value;
   var msg = document.forms["contact_form"]["msg"].value;
-  /*
-  if (checkMsgLength() == false){
-    return false;
-  }
-  */
+
   if (fName == "") {
-    alert("First Name must be filled out");
+   // alert("First Name must be filled out.");
+    document.getElementById("error_messages").innerHTML += "***First Name must be filled out.<br>" 
     document.getElementById("fname").style.borderColor = "red";
   }
-  if (lName == "") {
-    alert("Last Name must be filled out");
-    document.getElementById("lname").style.borderColor = "red";
-  }
   if (email == "") {
-    alert("Email must be filled out");
+    //alert("Email must be filled out");
     document.getElementById("mail").style.borderColor = "red";
+    document.getElementById("error_messages").innerHTML += "***Email must be filled out.<br>"
   }
   if (msg == "" || checkMsgLength() == false) {
-    alert("Message must be filled out with between 1 and 500 characters");
+   // alert("Message must be filled out with between 1 and 500 characters");
     document.getElementById("msg").style.borderColor = "red";
+    document.getElementById("error_messages").innerHTML += "***Message must be between 1-500 characters.<br>"
   }
   else {
     displayThankYouMessage();
