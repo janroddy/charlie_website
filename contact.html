@@ -28,17 +28,24 @@
       </div>
     
     <h1 class="titles">Send Charlie Some Love</h1>
+
     <div class ="row">
       <div class="column">
         <img src="img/baby_char.jpg" alt="Yorkie Poodle cross puppy" class="center" id="sweetboy2">
       </div>
-      <div  class="column"> 
-        <!--<form action="/my-handling-form-page" method="post"> -->
-          <form id="contact_form" action="/action_page.php" target="_blank" method="post">
+      <div  class="column" id="form_box"> 
+          
+          <div id="error_messages">
+            <h2>Fill out the form below to send a message to Charlie </h2>
+            <h3>All required fields are indicated with an * </h3>
+          </div>
+
+          <form id="contact_form" action="/action_page.php" onsubmit=" validateForm()" target="_blank" method="post">
+          
           <ul>
             <li>
-              <label for="name">First Name</label><br>
-              <input type="text" id="fname" name="first_name">
+              <label for="name">*First Name</label><br>
+              <input type="text" id="fname" name="first_name" required>
             </li>
 
             <li>
@@ -47,11 +54,12 @@
             </li>
             
             <li>
-              <label for="mail">E-mail</label><br>
+              <label for="mail">*E-mail</label><br>
               <input type="email" id="mail" name="user_mail">
             </li>
             
             <li>
+<<<<<<< HEAD
               <label for="msg">Message</label><br>
               <textarea id="msg" name="user_message" maxlength="500"></textarea>
             </li>
@@ -69,18 +77,22 @@
               <input type="radio" name="heart" value="the_most">The Most<br>
               <input type="radio" name="heart" value="oodles">Oodles of Poodles!<br> 
               !-->
+=======
+              <label for="msg">*Message</label><br>
+              <textarea type="text" id="msg" name="user_message"></textarea>
+            </li>
+    
+          </ul>
+>>>>>>> HW3
           </form>
-             <li> <input type="submit" value="Send Message"></li>
-           </ul>
-             <ul>
-             <li> <button onclick="getAllElements()">Review Message</button></li>
-             <li> <button onclick="validateForm()">Validate</button></li>
-            </ul>
+            <div id="buttons">
+              <input id="submit_button" type="submit" value="Send Message" onclick="validateForm()">
+            </div>              
+  
         
-        
-        <p id="demo"></p>
+        <div id="demo"></div>
 
-    </div>  
+      </div>   
     </div>
   </body>
 
