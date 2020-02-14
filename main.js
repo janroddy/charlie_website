@@ -84,10 +84,12 @@ function validateForm() {
   var lName = document.forms["contact_form"]["lname"].value;
   var email = document.forms["contact_form"]["mail"].value;
   var msg = document.forms["contact_form"]["msg"].value;
-
+  
+  
   if (fName == "") {
-   // alert("First Name must be filled out.");
-    document.getElementById("error_messages").innerHTML += "***First Name must be filled out.<br>" 
+    document.getElementById("error_messages").innerHTML = "***First Name must be filled out.<br>" 
+
+   // alert("First Name must be filled out."); 
     document.getElementById("fname").style.borderColor = "red";
   }
   if (email == "") {
