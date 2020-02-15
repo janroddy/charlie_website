@@ -10,7 +10,7 @@ console.log(mail);
 //event listener 
 mail.addEventListener('keyup', checkEmailInput()); 
 
-
+*/
 
 function checkEmailInput() {
   isValidEmail = mail.checkValidity();
@@ -25,7 +25,7 @@ function checkEmailInput() {
     }
 }
 
-*/
+
 
 //Mobile Navigation Menu Display->changes class name from menu to responsive 
 function myFunction() {
@@ -76,6 +76,17 @@ function checkMsgLength() {
   }
 } 
 
+function checkFName() {
+
+}
+
+function checkEmail() {
+
+}
+
+function checkMsg() {
+
+}
 
 
 //validates contact form input on the browser side 
@@ -88,21 +99,28 @@ function validateForm() {
   
   if (fName == "") {
     document.getElementById("error_messages").innerHTML = "***First Name must be filled out.<br>" 
-
-   // alert("First Name must be filled out."); 
     document.getElementById("fname").style.borderColor = "red";
   }
+  else {
+    document.getElementById("fname").style.borderColor = "black";
+  }
+
   if (email == "") {
     //alert("Email must be filled out");
     document.getElementById("mail").style.borderColor = "red";
-    document.getElementById("error_messages").innerHTML += "***Email must be filled out.<br>"
+    document.getElementById("error_messages").innerHTML = "***Email must be filled out.<br>"
+  } 
+  else {
+    document.getElementById("mail").style.borderColor = "black";
   }
+
   if (msg == "" || checkMsgLength() == false) {
    // alert("Message must be filled out with between 1 and 500 characters");
     document.getElementById("msg").style.borderColor = "red";
-    document.getElementById("error_messages").innerHTML += "***Message must be between 1-500 characters.<br>"
+    document.getElementById("error_messages").innerHTML = "***Message must be between 1-500 characters.<br>"
   }
   else {
+    document.getElementById("msg").style.borderColor = "black";
     displayThankYouMessage();
     return true; 
   }
