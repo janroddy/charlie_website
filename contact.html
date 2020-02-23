@@ -40,7 +40,9 @@
             <h3>All required fields are indicated with an * </h3>
           </div>
 
-          <form id="contact_form" action="/action_page.php" onsubmit=" validateForm()" target="_blank" method="post">
+          <!--action=<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?> -->
+
+          <form action="action_page.php" id="contact_form"  method="post" target="_blank" onsubmit="validateForm()">
           
           <ul>
             <li>
@@ -65,12 +67,10 @@
             </li>
     
           </ul>
-
-          </form>
             <div id="buttons">
-              <input id="submit_button" type="submit" value="Send Message" onclick="validateForm()">
+              <input id="submit_button" type="submit" value="Send Message" onsubmit="validateForm()">
             </div>              
-  
+          </form>
         
         <div id="demo"></div>
 
