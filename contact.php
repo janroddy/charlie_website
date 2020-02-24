@@ -38,7 +38,7 @@
           <li><a href="likes.html">Hobbies</a></li>
           <li><a href="friends.html">friends</a></li>
           <li><a href="adventures.html">Adventures</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.php">Contact</a></li>
           <li><a href="index.html" class="active">Home</a></li>
         </ul> 
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -63,7 +63,7 @@
 
           
 
-          <form onsubmit="validateForm()" id="contact_form" method="post"  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+          <form onsubmit="validateForm()" id="contact_form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
           
           <ul>
             <li>
@@ -96,18 +96,28 @@
         <div id="demo"></div>
 
       </div>  
-       Welcome <?php echo $_POST["first_name"]; ?><br>
-    Your email address is: <?php echo $_POST["user_mail"]; ?>
-    <?php
-    echo "<h2>Your Input:</h2>";
-    echo $firstName;
-    echo "<br>";
-    echo $lastName;
-    echo "<br>";
-    echo $email;
-    echo "<br>";
-    echo $userMsg;
-?> 
+        <div id="input_message" class="column">
+        Thanks, <?php echo $firstName . "!"?>
+        <br>
+        <?php 
+          echo "<h2 id='input_title'>Your Input:</h2>";
+          echo "Your first name is: "; 
+          echo $firstName;
+          echo "<br>";
+          echo "<br>";
+          echo "Your last name is: "; 
+          echo $lastName;
+          echo "<br>";
+          echo "<br>";
+          echo "Your email address is: "; 
+          echo $email;
+          echo "<br>";
+          echo "<br>";
+          echo "Your message is: "; 
+          echo "<br>";
+          echo $userMsg;
+        ?> 
+      </div>
     </div>
 
 

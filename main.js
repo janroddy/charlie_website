@@ -3,15 +3,6 @@ Citations: Some functions adapted from W3 Schools JavaScript tutorial
 */
 
 
-/*
-const mail = document.getElementById('mail');
-console.log(mail);
-
-//event listener 
-mail.addEventListener('keyup', checkEmailInput()); 
-
-*/
-
 function checkEmailInput() {
   isValidEmail = mail.checkValidity();
 
@@ -77,33 +68,21 @@ function checkMsgLength() {
 } 
 
 function checkFName() {
-
-}
-
-function checkEmail() {
-
-}
-
-function checkMsg() {
-
-}
-
-
-//validates contact form input on the browser side 
-function validateForm() {
   var fName = document.forms["contact_form"]["fname"].value;
-  var lName = document.forms["contact_form"]["lname"].value;
-  var email = document.forms["contact_form"]["mail"].value;
-  var msg = document.forms["contact_form"]["msg"].value;
-  
-  
+
   if (fName == "") {
     document.getElementById("error_messages").innerHTML = "***First Name must be filled out.<br>" 
     document.getElementById("fname").style.borderColor = "red";
+    return false;
   }
   else {
     document.getElementById("fname").style.borderColor = "black";
   }
+  return true;
+}
+
+function checkEmail() {
+  var email = document.forms["contact_form"]["mail"].value;
 
   if (email == "") {
     //alert("Email must be filled out");
@@ -114,26 +93,43 @@ function validateForm() {
     document.getElementById("mail").style.borderColor = "black";
   }
 
+}
+
+function checkMsgLength() {
+  var strLen = documet.forms["contact_form"]["msg"].length;
+  if (strLen > 500) {
+    alert("Charlie cannot receive messages longer than 500 characters.");
+  } 
+}
+
+
+function checkMsg() {
   if (msg == "" || checkMsgLength() == false) {
    // alert("Message must be filled out with between 1 and 500 characters");
     document.getElementById("msg").style.borderColor = "red";
     document.getElementById("error_messages").innerHTML = "***Message must be between 1-500 characters.<br>"
+    return false;
   }
   else {
     document.getElementById("msg").style.borderColor = "black";
     displayThankYouMessage();
     return true; 
   }
-  return false;
 }
 
 
-fuction checkMsgLength() {
-  var strLen = documet.forms["contact_form"]["msg"].length;
-  if (strLen > 250) {
-    alert("Charlie cannot receive messages longer than 500 characters.");
-  } 
+//validates contact form input on the browser side 
+function validateForm() {
+  var check1 = checkFName();
+  var check2 = checkEmail();
+  var check3 = checkMsg();
+
+  if (check3 == false || check2 == false || check1 == false) {
+    return false;
+  }
+  return true;
 }
+
 
 
 
